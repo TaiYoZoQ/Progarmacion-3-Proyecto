@@ -1,0 +1,20 @@
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\bin\Debug\netcoreapp3.1\Proyecto Prog 3.exe
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\bin\Debug\netcoreapp3.1\Proyecto Prog 3.deps.json
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\bin\Debug\netcoreapp3.1\Proyecto Prog 3.runtimeconfig.json
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\bin\Debug\netcoreapp3.1\Proyecto Prog 3.runtimeconfig.dev.json
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\bin\Debug\netcoreapp3.1\Proyecto Prog 3.dll
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\bin\Debug\netcoreapp3.1\Proyecto Prog 3.pdb
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto Prog 3.csprojAssemblyReference.cache
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto_Prog_3.FormularioPrincipal.resources
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto Prog 3.csproj.GenerateResource.cache
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto Prog 3.AssemblyInfoInputs.cache
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto Prog 3.AssemblyInfo.cs
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto Prog 3.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto Prog 3.dll
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto Prog 3.pdb
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto Prog 3.genruntimeconfig.cache
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto_Prog_3.Eventos.resources
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto_Prog_3.Alumnos.resources
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto_Prog_3.Tesoreria.resources
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto_Prog_3.Properties.Resources.resources
+C:\Users\Pablo\source\Prog 3\Proyecto Prog 3\obj\Debug\netcoreapp3.1\Proyecto_Prog_3.AltaEvento.resources
