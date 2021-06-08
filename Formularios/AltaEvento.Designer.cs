@@ -38,6 +38,7 @@ namespace Proyecto_Prog_3
             this.TBOrador = new System.Windows.Forms.TextBox();
             this.TBComision = new System.Windows.Forms.TextBox();
             this.BtnAlta = new System.Windows.Forms.Button();
+            this.BtnAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TbNombre
@@ -110,30 +111,41 @@ namespace Proyecto_Prog_3
             // 
             this.TBComision.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.TBComision.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TBComision.Location = new System.Drawing.Point(100, 141);
+            this.TBComision.Location = new System.Drawing.Point(103, 141);
             this.TBComision.Name = "TBComision";
             this.TBComision.Size = new System.Drawing.Size(46, 29);
             this.TBComision.TabIndex = 9;
-            this.TBComision.Text = "0";
             this.TBComision.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TBComision.Visible = false;
             // 
             // BtnAlta
             // 
             this.BtnAlta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnAlta.Location = new System.Drawing.Point(354, 182);
+            this.BtnAlta.Location = new System.Drawing.Point(374, 12);
             this.BtnAlta.Name = "BtnAlta";
-            this.BtnAlta.Size = new System.Drawing.Size(75, 36);
+            this.BtnAlta.Size = new System.Drawing.Size(55, 29);
             this.BtnAlta.TabIndex = 10;
             this.BtnAlta.Text = "Alta";
             this.BtnAlta.UseVisualStyleBackColor = true;
             this.BtnAlta.Click += new System.EventHandler(this.BtnAlta_Click);
+            // 
+            // BtnAtras
+            // 
+            this.BtnAtras.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnAtras.Location = new System.Drawing.Point(367, 188);
+            this.BtnAtras.Name = "BtnAtras";
+            this.BtnAtras.Size = new System.Drawing.Size(62, 30);
+            this.BtnAtras.TabIndex = 12;
+            this.BtnAtras.Text = "Atras";
+            this.BtnAtras.UseVisualStyleBackColor = true;
+            this.BtnAtras.Click += new System.EventHandler(this.BtnAtras_Click);
             // 
             // AltaEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 230);
+            this.Controls.Add(this.BtnAtras);
             this.Controls.Add(this.BtnAlta);
             this.Controls.Add(this.TBComision);
             this.Controls.Add(this.TBOrador);
@@ -161,5 +173,6 @@ namespace Proyecto_Prog_3
         private System.Windows.Forms.TextBox TBOrador;
         private System.Windows.Forms.TextBox TBComision;
         private System.Windows.Forms.Button BtnAlta;
+        private System.Windows.Forms.Button BtnAtras;
     }
 }

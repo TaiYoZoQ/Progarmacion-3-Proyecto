@@ -43,7 +43,7 @@ namespace Proyecto_Prog_3
             this.BtnEventos.TabIndex = 0;
             this.BtnEventos.Text = "Eventos";
             this.BtnEventos.UseVisualStyleBackColor = false;
-            this.BtnEventos.Click += new System.EventHandler(this.button1_Click);
+            this.BtnEventos.Click += new System.EventHandler(this.BtnEventos_Click);
             // 
             // BtnTesoreria
             // 
@@ -54,7 +54,7 @@ namespace Proyecto_Prog_3
             this.BtnTesoreria.TabIndex = 1;
             this.BtnTesoreria.Text = "Tesoreria";
             this.BtnTesoreria.UseVisualStyleBackColor = false;
-            this.BtnTesoreria.Click += new System.EventHandler(this.button2_Click);
+            this.BtnTesoreria.Click += new System.EventHandler(this.BtnTesoreria_Click);
             // 
             // BtnAlumnos
             // 
@@ -65,7 +65,7 @@ namespace Proyecto_Prog_3
             this.BtnAlumnos.TabIndex = 2;
             this.BtnAlumnos.Text = "Alumnos";
             this.BtnAlumnos.UseVisualStyleBackColor = false;
-            this.BtnAlumnos.Click += new System.EventHandler(this.button3_Click);
+            this.BtnAlumnos.Click += new System.EventHandler(this.BtnAlumnos_Click);
             // 
             // FormularioPrincipal
             // 

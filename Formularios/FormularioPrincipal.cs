@@ -20,21 +20,21 @@ namespace Proyecto_Prog_3
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnEventos_Click(object sender, EventArgs e)
         {
             Form eventos = new Eventos(this, sistema);
             eventos.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BtnAlumnos_Click(object sender, EventArgs e)
         {
             Form alumnos = new Alumnos(this, sistema);
             alumnos.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnTesoreria_Click(object sender, EventArgs e)
         {
             Form tesoreria = new Tesoreria(this, sistema);
             tesoreria.Show();

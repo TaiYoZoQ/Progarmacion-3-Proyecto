@@ -14,6 +14,8 @@ namespace Proyecto_Prog_3
         static void Main()
         {
             var sistema = new Sistema();
+
+            //Cargo Archivo de sistema
             if (File.Exists("Sys.bin"))
             {
                 Stream flujo = File.OpenRead("Sys.bin");
@@ -21,26 +23,14 @@ namespace Proyecto_Prog_3
                 sistema = (Sistema) deserializador.Deserialize(flujo);
                 flujo.Close();
             }
-
-            /*
-            var CursoOn = new CursoOnline("Php", 3500, 0.3);
-            var CursoPe = new CursoPresencial("Java", 5000, 4);
-            var Charla = new Charla("Desarrollo Full Stack", 800, "Jorge Argibay");
-            var alumno = new Alumno("Pablo Maggiolo", 1, true);
             
-
-            sistema.AgregarEvento(CursoOn);
-            sistema.AgregarEvento(CursoPe);
-            sistema.AgregarEvento(Charla);
-            sistema.AgregarAlumno(alumno);
-            sistema.InscribirAEvento(1, 2);
-            */
-
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Le paso la variable sistema al primer formulario (ya sea "vacia" o cargada con los datos).
             Application.Run(new FormularioPrincipal(sistema));
 
+            //Guardo Archivo de sistema actualizado
             Stream flujo2 = File.Create("Sys.bin");
             BinaryFormatter serializador = new BinaryFormatter();
             serializador.Serialize(flujo2, sistema);

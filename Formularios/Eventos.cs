@@ -22,19 +22,22 @@ namespace Proyecto_Prog_3
 
         }
 
+        //Boton para volver
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             FrmPrincipal.Show();
         }
 
+
         private void Alta_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             var AltaEvento = new AltaEvento(tipoevento, FrmPrincipal, sistema);
             AltaEvento.Show();
         }
 
+        //Cambio la variable que define(con un int de 1 a 3) el tipo de evento a dar de alta.
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             tipoevento = 1;
