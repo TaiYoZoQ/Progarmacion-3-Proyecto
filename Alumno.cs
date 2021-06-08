@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Proyecto_Prog_3
 {
-    class Alumno
+    [Serializable]
+    public class Alumno
     {
         public int Id;
         public string Nombre;
         public bool Socio;
         public Dictionary<int, Evento> Eventos;
-        private int CantidadDeEventos = 0;
-        public double Abonado = 0;
+        private int CantidadDeEventos = 0;        
 
         public Alumno(string nombre, int id, bool socio)
         {
@@ -30,6 +30,7 @@ namespace Proyecto_Prog_3
         
         public double CuantoAbona()
         {
+            double Abonado = 0;
             if (Eventos.Count > 0)
             {
                 foreach (KeyValuePair<int, Evento> evento in Eventos)

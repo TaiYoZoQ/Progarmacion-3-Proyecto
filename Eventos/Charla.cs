@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Proyecto_Prog_3
 {
+    [Serializable]
     class Charla : Evento
     {
         public string Orador;

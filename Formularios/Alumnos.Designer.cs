@@ -41,6 +41,8 @@ namespace Proyecto_Prog_3
             this.label4 = new System.Windows.Forms.Label();
             this.Inscribir = new System.Windows.Forms.Button();
             this.BtnVerEventos = new System.Windows.Forms.Button();
+            this.BtnAlta = new System.Windows.Forms.Button();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -94,7 +96,7 @@ namespace Proyecto_Prog_3
             // 
             // TbNombre
             // 
-            this.TbNombre.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.TbNombre.BackColor = System.Drawing.SystemColors.Window;
             this.TbNombre.Enabled = false;
             this.TbNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TbNombre.Location = new System.Drawing.Point(86, 69);
@@ -166,11 +168,37 @@ namespace Proyecto_Prog_3
             this.BtnVerEventos.UseVisualStyleBackColor = true;
             this.BtnVerEventos.Click += new System.EventHandler(this.BtnVerEventos_Click);
             // 
+            // BtnAlta
+            // 
+            this.BtnAlta.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnAlta.Location = new System.Drawing.Point(272, 9);
+            this.BtnAlta.Name = "BtnAlta";
+            this.BtnAlta.Size = new System.Drawing.Size(74, 26);
+            this.BtnAlta.TabIndex = 17;
+            this.BtnAlta.Text = "Alta";
+            this.BtnAlta.UseVisualStyleBackColor = true;
+            this.BtnAlta.Click += new System.EventHandler(this.BtnAlta_Click);
+            // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.Enabled = false;
+            this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnGuardar.Location = new System.Drawing.Point(272, 9);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(74, 26);
+            this.BtnGuardar.TabIndex = 16;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Visible = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
             // Alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(358, 328);
+            this.Controls.Add(this.BtnGuardar);
+            this.Controls.Add(this.BtnAlta);
             this.Controls.Add(this.BtnVerEventos);
             this.Controls.Add(this.Inscribir);
             this.Controls.Add(this.label4);
@@ -204,5 +232,7 @@ namespace Proyecto_Prog_3
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Inscribir;
         private System.Windows.Forms.Button BtnVerEventos;
+        private System.Windows.Forms.Button BtnAlta;
+        private System.Windows.Forms.Button BtnGuardar;
     }
 }

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Proyecto_Prog_3
 {
+    [Serializable]
     class CursoOnline : Evento
     {
         public double Comision = 0;

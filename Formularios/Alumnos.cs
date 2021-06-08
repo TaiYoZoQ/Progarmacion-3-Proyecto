@@ -12,11 +12,14 @@ namespace Proyecto_Prog_3
     {
         private Form FrmPrincipal;
         private Alumno alumnoAux;
-        private Dictionary<int, Evento> Eventos = Sistema.DictionaryEventos;
+        private Dictionary<int, Evento> Eventos;
+        private Sistema sistema;
 
-        public Alumnos(Form Principal)
+        public Alumnos(Form principal, Sistema sis)
         {
-            FrmPrincipal = Principal;
+            Eventos = sis.Eventos;
+            sistema = sis;
+            FrmPrincipal = principal;
             InitializeComponent();
 
         }
@@ -34,7 +37,7 @@ namespace Proyecto_Prog_3
                 try
                 {
                     //1
-                    alumnoAux = Sistema.BuscarAlumnoPorID(int.Parse(TbId.Text));
+                    alumnoAux = sistema.BuscarAlumnoPorID(int.Parse(TbId.Text));
                     TbNombre.Text = alumnoAux.Nombre;
                     //2
                     if (alumnoAux.Socio)
@@ -60,18 +63,21 @@ namespace Proyecto_Prog_3
 
         }
 
+        //Volver Atras
         private void BtnAtras_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmPrincipal.Show();
         }
-
+        
+        //Inscribir a Evento seleccionado
         private void Inscribir_Click(object sender, EventArgs e)
         {
-            Sistema.InscribirAEvento(alumnoAux.Id, CbEventos.SelectedIndex+1);
+            sistema.InscribirAEvento(alumnoAux.Id, CbEventos.SelectedIndex+1);
             MessageBox.Show("Alumno Inscripto");
         }
 
+        //Mostrar Eventos inscriptos
         private void BtnVerEventos_Click(object sender, EventArgs e)
         {
             string mensaje ="";
@@ -82,6 +88,51 @@ namespace Proyecto_Prog_3
                 mensaje += evento.Value.GetNombre()+" ";
             }
             MessageBox.Show(mensaje);
+        }
+
+        //Dar Alta a nuevo Alumno
+        private void BtnAlta_Click(object sender, EventArgs e)
+        {
+
+            if (!String.IsNullOrEmpty(TbId.Text))
+            { 
+                try
+                {
+                    alumnoAux = sistema.BuscarAlumnoPorID(int.Parse(TbId.Text));
+                    MessageBox.Show("Debe ingresar una ID sin usar");
+                }
+                catch (AlumnoInexistente)
+                {
+                    Buscar.Enabled = false;
+                    TbId.Enabled = false;
+                    BtnAlta.Hide();
+                    BtnGuardar.Enabled = true;
+                    BtnGuardar.Show();
+                    CbEsSocio.Enabled = true;
+                    CbEsSocio.Checked = false;
+                    TbNombre.Enabled = true;
+                    TbNombre.Text = "";
+                }
+            }
+            else
+                MessageBox.Show("Debe ingresar una ID sin usar");
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+
+            var alumnoAux = new Alumno(TbNombre.Text, Convert.ToInt32(TbId.Text), CbEsSocio.Checked);
+            sistema.AgregarAlumno(alumnoAux);
+            MessageBox.Show($"Alumno {TbNombre.Text} dado de Alta con la id {TbId.Text}");
+            Buscar.Enabled = true;
+            TbId.Enabled = true;
+            TbId.Text = "";
+            BtnGuardar.Hide();
+            BtnAlta.Show();
+            CbEsSocio.Enabled = false;
+            CbEsSocio.Checked = false;
+            TbNombre.Enabled = false;
+            TbNombre.Text = "";
         }
     }
 }

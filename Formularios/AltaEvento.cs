@@ -12,9 +12,11 @@ namespace Proyecto_Prog_3
     {
         private int tipoevento;
         private Form Principal;
+        private Sistema sistema;
 
-        public AltaEvento(int tipoDeEvento, Form fmrPrincipal)
+        public AltaEvento(int tipoDeEvento, Form fmrPrincipal, Sistema sis)
         {
+            sistema = sis;
             Principal = fmrPrincipal;
             tipoevento = tipoDeEvento;
             InitializeComponent();
@@ -31,20 +33,21 @@ namespace Proyecto_Prog_3
             {
                 case 1:
                     var CursoP = new CursoPresencial(TbNombre.Text, costo, Convert.ToInt32(CBAulas.SelectedItem));
-                    Sistema.AgregarEvento(CursoP);
+                    sistema.AgregarEvento(CursoP);
                     break;
 
                 case 2:
                     double comision;
                     double.TryParse(TBComision.Text, out comision);
+                    comision /= 100;
 
                     var CursoOn = new CursoOnline(TbNombre.Text, costo, comision);
-                    Sistema.AgregarEvento(CursoOn);
+                    sistema.AgregarEvento(CursoOn);
                     break;
 
                 case 3:
                     var Charla = new Charla(TbNombre.Text, costo, TBOrador.Text);
-                    Sistema.AgregarEvento(Charla);
+                    sistema.AgregarEvento(Charla);
                     break;
 
             }

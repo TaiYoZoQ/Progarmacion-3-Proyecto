@@ -12,28 +12,31 @@ namespace Proyecto_Prog_3
 {
     public partial class FormularioPrincipal : Form
     {
-        public FormularioPrincipal()
+        private Sistema sistema;
+
+        public FormularioPrincipal(Sistema sis)
         {
+            sistema = sis;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var eventos = new Eventos(this);
+            Form eventos = new Eventos(this, sistema);
             eventos.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var alumnos = new Alumnos(this);
+            Form alumnos = new Alumnos(this, sistema);
             alumnos.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var tesoreria = new Tesoreria(this);
+            Form tesoreria = new Tesoreria(this, sistema);
             tesoreria.Show();
             this.Hide();
         }

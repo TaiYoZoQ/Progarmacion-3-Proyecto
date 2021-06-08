@@ -12,9 +12,11 @@ namespace Proyecto_Prog_3
     {
         private Form FrmPrincipal;
         int tipoevento = 1; //Por default
+        private Sistema sistema;
 
-        public Eventos(Form Principal)
+        public Eventos(Form Principal, Sistema sis)
         {
+            sistema = sis;
             FrmPrincipal = Principal;
             InitializeComponent();
 
@@ -29,7 +31,7 @@ namespace Proyecto_Prog_3
         private void Alta_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var AltaEvento = new AltaEvento(tipoevento, FrmPrincipal);
+            var AltaEvento = new AltaEvento(tipoevento, FrmPrincipal, sistema);
             AltaEvento.Show();
         }
 

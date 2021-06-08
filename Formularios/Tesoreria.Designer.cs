@@ -52,9 +52,9 @@ namespace Proyecto_Prog_3
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(271, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 21);
+            this.label1.Size = new System.Drawing.Size(109, 21);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Total Recaudado";
+            this.label1.Text = "Total Abonado";
             // 
             // label2
             // 

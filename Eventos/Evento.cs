@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Proyecto_Prog_3
 {
-    abstract class Evento
+    [Serializable]
+    public abstract class Evento
     {
         protected string Nombre;
         public double Costo;
